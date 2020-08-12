@@ -14,3 +14,10 @@ docker-compose build
 ```
 docker-compose run app sh -c "django-admin.py startproject app ."
 ```
+
+
+
+# Travis CI SET UP
+
+go to travis website and enable the github project.
+- create .travis.yml file
