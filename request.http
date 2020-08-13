@@ -1,3 +1,13 @@
+### Create User
+
+POST http://localhost:8000/api/user/create/
+Content-Type: application/json
+
+{
+    "email": "test@test.com",
+    "password": "password",
+    "name": "Test User"
+}
 
 ### LOGIN
 POST http://localhost:8000/api/user/token/
@@ -8,8 +18,9 @@ Content-Type: application/json
     "password": "password"
 }
 
+
 ### TOKEN
-@Token = c682b4fb3223501c51087a9f19a22b9dd5730f23
+@Token = 03473b3567ff69c1db14520511165f3e934ad9ba
 ###
 # GET TOKEN AT http://localhost:8000/api/user/token/
 # USER ME ROUTE
@@ -24,4 +35,23 @@ Authorization: token {{Token}}
 
 {
    "name": "Wilfred"
+}
+
+
+### Create ingredient
+POST http://localhost:8000/api/recipe/ingredients/
+Content-Type: application/json
+Authorization: token {{Token}}
+
+{
+    "name": "Potato"
+}
+
+### Create Tag
+POST http://localhost:8000/api/recipe/tags/
+Content-Type: application/json
+Authorization: token {{Token}}
+
+{
+    "name": "Delicous"
 }
