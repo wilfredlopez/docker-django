@@ -1,0 +1,27 @@
+
+### LOGIN
+POST http://localhost:8000/api/user/token/
+Content-Type: application/json
+
+{
+    "email": "test@test.com",
+    "password": "password"
+}
+
+### TOKEN
+@Token = c682b4fb3223501c51087a9f19a22b9dd5730f23
+###
+# GET TOKEN AT http://localhost:8000/api/user/token/
+# USER ME ROUTE
+
+GET http://localhost:8000/api/user/me/
+Authorization: token {{Token}}
+
+### UPDATE USER
+PATCH  http://localhost:8000/api/user/me/
+Content-Type: application/json
+Authorization: token {{Token}}
+
+{
+   "name": "Wilfred"
+}
