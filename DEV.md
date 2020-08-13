@@ -1,16 +1,26 @@
-# START
+# START DOCKER ONLY
 ```
 docker build .
 ```
 
-# Start Compose
+# Start Compose localhost:8000
 
 ```
 docker-compose build
 ```
+# RUN APP
+
+```
+docker-compose up
+```
+# STOP APP
+
+```
+docker-compose down
+```
 
 # Run Compose
-### START
+### START PROJECT
 ```
 docker-compose run app sh -c "django-admin.py startproject app ."
 ```
@@ -29,7 +39,10 @@ docker-compose run app sh -c "django-admin.py startapp core"
 ```
 docker-compose run app sh -c "python manage.py makemigrations core"
 ```
-
+### Create superuser in terminal
+```
+docker-compose run app sh -c  "python manage.py createsuperuser"
+```
 # Travis CI SET UP
 
 go to travis website and enable the github project.
