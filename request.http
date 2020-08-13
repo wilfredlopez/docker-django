@@ -61,6 +61,11 @@ GET http://localhost:8000/api/recipe/recipes/
 Content-Type: application/json
 Authorization: token {{Token}}
 
+### GET ONE RECIPE
+GET http://localhost:8000/api/recipe/recipes/1
+Content-Type: application/json
+Authorization: token {{Token}}
+
 ### CREATE RECIPES
 ### The ingredients and tags should be an array of ids.
 POST http://localhost:8000/api/recipe/recipes/
@@ -79,3 +84,8 @@ Authorization: token {{Token}}
   "price": 9.99,
   "link": ""
 }
+
+
+### UPLOAD IMAGE TO RECIPE
+### http://localhost:8000/api/recipe/recipes/1/upload-image/
+
